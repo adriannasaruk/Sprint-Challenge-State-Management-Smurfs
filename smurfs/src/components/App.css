@@ -1,3 +1,30 @@
 .App {
   text-align: center;
 }
+.cards{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: space-evenly;
+  border: 1px solid red;
+  background: grey;
+  color: white;
+  margin: 2px;
+}
+.main {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+form{
+  margin-bottom: 20px;
+}
+button{
+  background: darkblue;
+  border: 2px white solid;
+  border-radius: 5px;
+  color: white;
+  margin: 5px;
+}
