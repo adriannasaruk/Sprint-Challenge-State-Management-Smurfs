@@ -3,14 +3,16 @@ import {connect} from "react-redux"
 
 const SmurfList = (props) => {
 return(
+    <div className = "main">
         <>{props.error ? (<div className= "error">props.error</div>) 
         : (props.smurfs.map(item => (
-            <div>
-                <h3>{item.name}</h3>
-                <p>{item.age}</p>
-                <p>{item.height}</p>
+            <div className= "cards">
+                <h4>Name: {item.name}</h4>
+                <p>Age: {item.age}</p>
+                <p>Height: {item.height}</p>
             </div>
         )))}</>
+        </div>
 )}
 
 const mapStateToProps = state => {

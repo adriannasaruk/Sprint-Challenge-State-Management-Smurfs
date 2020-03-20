@@ -1,4 +1,5 @@
 import axios from "axios"
+import SmurfForm from "../components/SmurfForm"
 
 export const getData = () => dispatch=> {
     dispatch({type: "GET_DATA"});
@@ -10,9 +11,11 @@ export const getData = () => dispatch=> {
 dispatch ({ type: "SET_ERROR", payload: "error fetching data"})})
 }
 
-export const addItem = (value,age,height) => dispatch=> {
+export const addItem = (smurf) => dispatch=> {
+    console.log(smurf)
     dispatch({type: "ADD_ITEM"});
-    axios.post("http://localhost:3333/smurfs")
+    axios
+    .post("http://localhost:3333/smurfs", smurf)
     .then(res => {console.log(res)
     dispatch({type: "UPDATE_DATA", payload: res.data})
 })
@@ -20,4 +23,3 @@ export const addItem = (value,age,height) => dispatch=> {
 dispatch ({ type: "SET_ERROR", payload: "error fetching data"})})
 }
 
-export default  addItem

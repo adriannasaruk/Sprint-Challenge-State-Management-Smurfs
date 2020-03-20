@@ -22,7 +22,8 @@ const reducer = (state = initialState, action) => {
             case "ADD_ITEM":
             return {
                 ...state,
-                
+                isFetchingData: true
+                           
                
             }
         case "SET_ERROR":

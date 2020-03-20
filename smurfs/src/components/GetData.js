@@ -9,7 +9,7 @@ const GetData = (props) => {
     }
     return (
         <div>
-        {props.isFetchingData ? (<div>This is the Village:</div>)
+        {props.isFetchingData ? (<h1>This is the Village:</h1>)
          : (<button onClick={handle}>Show me the smurfsvillage</button>)}
         </div>
     )
